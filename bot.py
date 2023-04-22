@@ -8,6 +8,7 @@ load_dotenv()
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='!', intents=intents)
 
+cogs=["commands.academics"]
 
 @bot.event
 async def on_ready():
@@ -18,7 +19,12 @@ async def on_ready():
     for command in bot.commands: 
         print(f"{command.name} 🟢")
     
-    # Syncing trees
+    # Loading cogs
+    for cog in cogs:
+        await bot.load_extension(cog)
+        print(f'Loaded cog {cog} 🔩')
+    
+    # Syncing tree
     await bot.tree.sync()
     print('Synced the tree.')
 
