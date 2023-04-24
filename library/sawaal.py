@@ -11,14 +11,14 @@ class Sawaal:
         self.choices = choices
         self.created_at = created_at
 
-async def Sawaal_Embed(sawaal: Sawaal):
+def Sawaal_Embed(sawaal: Sawaal):
     embed = discord.Embed(title="", description=f"**{sawaal.text}**", color=0x00ff00, timestamp=sawaal.created_at)
     embed.set_image(url=sawaal.image_url)
     embed.set_footer(text=f"Id: {sawaal.id} | Votes: {sawaal.votes}")
 
     return embed
 
-async def Sawaal_Buttons(sawaal: Sawaal):
+#async def Sawaal_Buttons(sawaal: Sawaal):
     
     #TODO 😇
 
