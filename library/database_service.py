@@ -40,4 +40,4 @@ def get_random_sawaal():
     sawaal_object = Sawaal(id=result[0][0], text=result[0][1], image_url=result[0][2], answer=result[0][3], votes=result[0][4], choices=result[0][5], created_at=result[0][6])
     print("Retrieved Sawaal Successfully")
     return sawaal_object
-get_random_sawaal()
+
